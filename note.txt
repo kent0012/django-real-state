@@ -1,0 +1,65 @@
+
+# Create Virtual ENV.
+- python3 -m venv env
+
+# Activate the virtual environment:
+- .\env\Scripts\activate
+
+# create github repository
+ - //
+# run this command
+- npx gitignore python 
+
+# search this to chrome for gitignore
+- https://www.toptal.com/developers/gitignore/api/python
+
+# initialize github repository
+- git init 
+- git remote add origin https://github.com/kent0012/django-realstate.git
+- git remote -v (to confirm)
+
+# check requirements txt and install the requirements libraries
+- pip install -r requirements.txt
+- python.exe -m pip install --upgrade pip (if having an error)
+
+# confirm dependencies installed
+
+- pip list
+
+#create django project
+
+- django-admin startproject real_state .
+
+# Custom gitgnore file add it to git ignore file
+.vscode
+.idea
+.coverage
+.DS_Store
+staticfiles
+mediafiles
+client/node_modules
+
+# create setup.cfg file under main DR
+- configure flake 8
+
+# create .env file under main DR
+- configure .env
+- go to settings find the SECRET_KEY AND DEBUG=true and copy to .env file
+
+# configure settings.python
+
+- //
+
+# create a folder apps under the main DR and run this command
+
+- python manage.py startapp users
+- python manage.py startapp profiles
+- python manage.py startapp common
+- python manage.py startapp users ratings
+
+- open each app then rename it with app.users, apps.profiles, apps.common, apps.ratings
+- then move each folder to the (apps) folder
+
+# configure again the settings
+- after configure
+- python manage.py runserver
