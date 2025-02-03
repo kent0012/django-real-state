@@ -117,3 +117,20 @@ client/node_modules
   - python manage.py runserver // check first ther is an error occured.
   - python manage.py makemigrations
   - python manage.py migrate
+
+
+=========== STEP 4 =============
+
+   # Pseudo Primary 
+   - go to apps/common/models.py  || configure it
+   - go to profiles Models and add profile models
+   - create a signals.py and configure it
+   - go to apps.py 
+      def ready(self):
+        from apps.profiles import signals
+  - go to profiles admin.py create a ProfileAdmin class
+  - python manage.py runserver // check any error occured
+  - python manage.py makemigrations
+  - python manage.py migrate
+  - python manage.py createsuperuser
+  - python manage.py runserver login admin
