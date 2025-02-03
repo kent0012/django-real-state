@@ -132,6 +132,10 @@ MEDIA_ROOT = BASE_DIR / "mediafiles"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# register auth model
+
+AUTH_USER_MODEL = 'users.User'
+
 
 import logging 
 import logging.config
@@ -174,9 +178,9 @@ logging.config.dictConfig({
             "propagate":False,
             },
             "apps":{
-                "level": "INFO", 
+                "levrel": "INFO", 
                 "handlers":["console"],
-                "propagate":False,
+                "popagate":False,
             },
             "django.server": DEFAULT_LOGGING["loggers"]["django.server"],
     }
