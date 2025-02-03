@@ -1,3 +1,4 @@
+ =========== STEP 1 =============
 
 # Create Virtual ENV.
 - python3 -m venv env
@@ -63,3 +64,27 @@ client/node_modules
 # configure again the settings
 - after configure
 - python manage.py runserver
+
+
+ =========== STEP 2 =============
+
+ # create new folder DR under realstate app to have a (PRODUCTION & STAGING)
+
+ - create __init__.py file
+ - base.py
+ - developement.py
+ - production.py
+ - copy and paste settings.py and paste it to base.py
+ - delete settings.py
+ - cut DATABASES in the base.py and and paste it development.py
+ - configure all base.py, developement.py, and production.py
+
+ # create database in PG ADMIN
+
+ - go to base.py change the 
+ - configure base.py STATIC_URL
+ 
+ # change os DR
+ - from real_state.settings real_state.settings.developement
+ - do the same within the manage.py
+ - configure urls.py
