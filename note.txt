@@ -88,3 +88,13 @@ client/node_modules
  - from real_state.settings real_state.settings.developement
  - do the same within the manage.py
  - configure urls.py
+
+  =========== STEP 3 =============
+  
+  # Configure logging
+
+  - configure it on the base.py at the bottom
+  - create logs DR under main main DR
+  - python manage.py runserver
+  - open not found file to test loggers in terminal and check the folder logs, that store the error logs
+  - delete db.sqlite
