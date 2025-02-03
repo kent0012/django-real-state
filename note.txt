@@ -90,6 +90,7 @@ client/node_modules
  - configure urls.py
 
   =========== STEP 3 =============
+
   
   # Configure logging
 
@@ -98,3 +99,21 @@ client/node_modules
   - python manage.py runserver
   - open not found file to test loggers in terminal and check the folder logs, that store the error logs
   - delete db.sqlite
+
+  =========== STEP 3 =============
+
+  # create a custom user model 
+
+  - 2 types to custom user model
+  - Abstract User (when you want to update exisitng user model in django)
+  - Abstract Base User (When you want to customize full user model)
+
+  # Abstract Base User
+  - navigate to apps/users/test.py || rename it to managers.py
+  - configure managers.py
+  - configure models.py for users Model
+  - register model int the real_state/settings.py (AUTH_USER_MODEL = 'users.User')
+  - configure admin.py in the users
+  - python manage.py runserver // check first ther is an error occured.
+  - python manage.py makemigrations
+  - python manage.py migrate
